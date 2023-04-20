@@ -3,7 +3,7 @@ import { store } from '../store';
 
 export default {
   name: "AppHeader",
-  emits: ["search"]
+  emits: ["search"],
   data() {
     return {
       store

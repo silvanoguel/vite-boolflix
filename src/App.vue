@@ -18,6 +18,7 @@ export default {
     performSearch() {
       if(this.store.searchKey) {
         this.getMovies();
+
       }
     },
     getMovies(){
@@ -31,7 +32,7 @@ export default {
       }).catch(err => {
         console.log(err)
       })
-    }
+    },
   },
 }
 
