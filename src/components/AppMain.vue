@@ -16,13 +16,34 @@ export default {
 </script>
 
 <template>
-    <h2>MOVIES</h2>
-    <ul>
-        <li v-for="movie in store.movies">
-            <AppCard :movie="movie" />
-        </li>
-    </ul>
+
+    <div class="container">
+        <h2>MOVIES</h2>
+        <ul class="row row-cols-6 g-3">
+            <li v-for="movie in store.movies" :key="movie.id" @mouseover="active[movie.id] = true"
+            @mouseout="active[movie.id] = false">
+                <AppCard :cardObj="movie" />
+            </li>
+        </ul>
 
 
+        <h2>Series</h2>
+        <ul class="row row-cols-6 g-3">
+            <li v-for="serie in store.series" :key="serie.id" @mouseover="active[serie.id] = true"
+            @mouseout="active[serie.id] = false">
+                <AppCard :cardObj="serie" />
+            </li>
+        </ul>
+    </div>
 </template>
+
+
+<style scoped lang="scss">
+
+ul {
+    list-style-type:none ;
+}
+
+</style>
+
 

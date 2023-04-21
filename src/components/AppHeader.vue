@@ -14,12 +14,44 @@ export default {
 </script>
 
 <template>
-  <h2>Header</h2>
-  <input type="text" v-model.trim="store.searchKey">
-  <button @click="$emit('search')">SEARCH</button>
+  <header>
+    <div class="container">
+      <h1 class="title mx-3">BoolFlix</h1>
+      <div class="input mx-3 flex-nowrap">
+          <input type="text" v-model.trim="store.searchKey">
+          <button class="btn btn-danger" @click="$emit('search')">SEARCH</button>
+      </div>
+
+    </div>
+
+
+  </header>
+  
+
+
 </template>
 
 <style scoped lang="scss">
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    padding: 50px;
+}
+  h1 {
+    color: red;
+  }
+  button {
+    background-color: white;
+    color: black;
+}
+
+.input{
+    min-width: 40vh;
+}
+
 
 </style>
 
