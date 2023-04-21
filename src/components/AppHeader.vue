@@ -17,9 +17,9 @@ export default {
   <header>
     <div class="container">
       <h1 class="title mx-3">BoolFlix</h1>
-      <div class="input mx-3 flex-nowrap">
-          <input type="text" v-model.trim="store.searchKey">
-          <button class="btn btn-danger" @click="$emit('search')">SEARCH</button>
+      <div class="input mx-3">
+          <input type="text" v-model.trim="store.searchKey" placeholder="Search film or tv serie">
+          <button class="btn btn-danger ms-3" @click="$emit('search')">SEARCH</button>
       </div>
 
     </div>

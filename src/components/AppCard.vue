@@ -25,7 +25,6 @@ export default {
         },
         objOriginalTitle() {
             return this.cardObj.original_title ? this.cardObj.original_title : this.cardObj.original_name
-
         },
     }
 }
@@ -40,8 +39,7 @@ export default {
       <div class="card text-bg-dark card_shadow card_hover" @mouseover="showInfo = true" @mouseleave="showInfo = false">
           <div v-show="!showInfo" class="py-4">
               <div class="my-card-image">
-                <img :src="cardObj.poster_path ? `https://image.tmdb.org/t/p/w342${cardObj.poster_path}` : 'img.jpg'"
-                :alt="cardObj.title">
+                <img :src="`https://image.tmdb.org/t/p/w342${cardObj.poster_path}`" alt="">
               </div>
           </div>
 

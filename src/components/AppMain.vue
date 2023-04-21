@@ -18,19 +18,13 @@ export default {
 <template>
 
     <div class="container">
-        <h2>MOVIES</h2>
         <ul class="row row-cols-5 g-3">
-            <li v-for="movie in store.movies" :key="movie.id" @mouseover="active[movie.id] = true"
-            @mouseout="active[movie.id] = false">
+            <li v-for="movie in store.movies" :key="movie.id">
                 <AppCard :cardObj="movie" />
             </li>
         </ul>
-
-
-        <h2>Series</h2>
-        <ul class="row row-cols-6 g-3">
-            <li v-for="serie in store.series" :key="serie.id" @mouseover="active[serie.id] = true"
-            @mouseout="active[serie.id] = false">
+        <ul class="row row-cols-5 g-3">
+            <li v-for="serie in store.series" :key="serie.id">
                 <AppCard :cardObj="serie" />
             </li>
         </ul>
