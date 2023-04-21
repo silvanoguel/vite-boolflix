@@ -19,7 +19,7 @@ export default {
 
     <div class="container">
         <h2>MOVIES</h2>
-        <ul class="row row-cols-6 g-3">
+        <ul class="row row-cols-5 g-3">
             <li v-for="movie in store.movies" :key="movie.id" @mouseover="active[movie.id] = true"
             @mouseout="active[movie.id] = false">
                 <AppCard :cardObj="movie" />
